@@ -23,11 +23,13 @@ ch{챕터번호}-{역할}-{순번}.{확장자}
 
 ## 본문(마크다운)에서 넣는 법
 
-같은 저장소 기준 **상대 경로**를 쓴다.
+같은 저장소 기준 **상대 경로**를 쓴다. (챕터 파일이 `manuscript/chapters/`에 있을 때)
 
 ```markdown
-![3장 — 놀이 장면 설명](assets/photos/ch03-photo-01.jpg)
+![3장 — 놀이 장면 설명](../assets/photos/ch03-photo-01.jpg)
 ```
+
+`manuscript/` 바로 아래에 두는 메모라면 `assets/photos/...`로 시작해도 된다.
 
 캡션 문구는 본문에 짧게 두고, **그림 목록**은 `outline.md` 또는 별도 `캡션-목록.md`에 표로 정리한다.
 
