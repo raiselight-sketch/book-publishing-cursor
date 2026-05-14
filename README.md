@@ -27,9 +27,6 @@
 
 ## GitHub
 
-원격 저장소를 연결한 뒤 푸시한다.
+원격 저장소: [https://github.com/raiselight-sketch/book-publishing-cursor](https://github.com/raiselight-sketch/book-publishing-cursor)
 
-```bash
-git remote add origin https://github.com/<USER>/<REPO>.git
-git push -u origin main
-```
+다른 계정·저장소 이름으로 옮길 때는 `git remote set-url origin …` 후 `git push` 하면 된다.
