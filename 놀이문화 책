@@ -1,7 +1,41 @@
-# 놀이문화 (집필 노트)
+# 놀이문화 · 집필 허브
 
-현재 집필 중인 책으로, **사진·도판·AI 이미지**가 들어간다.
+**시각 자료:** 사진·도판·AI 이미지 → `manuscript/assets/` (`README.md`, `IMAGE-MANIFEST`)
 
-- 목차·코어 문장: `manuscript/outline.md`
-- 연구·NotebookLM: `manuscript/research/notebook-lm/`
-- 이미지 원본·매니페스트: `manuscript/assets/` (`README.md` 참고)
+---
+
+## ① NotebookLM / Gems에서 붙여 넣는 곳
+
+아래 구분선 아래에 **마크다운을 그대로 붙여 넣으면** 된다. 붙인 뒤 Git 저장하거나, 길면 `manuscript/research/notebook-lm/snippets/`에 날짜 파일로 옮겨도 된다.
+
+<!-- NOTEBOOKLM_PASTE_START -->
+
+(여기에 붙여 넣기)
+
+<!-- NOTEBOOKLM_PASTE_END -->
+
+---
+
+## ② 지금 저장소에 있는 두 갈래 원고
+
+| 구분 | 내용 | 경로 |
+|------|------|------|
+| **A. 교육 매뉴얼 (완성 원고 초안)** | 「놀이로 여는 아이들의 마음 세상」— 목회·교사 정서 돌봄, PART 1~5·부록까지 **장문 원고** | `manuscript/research/notebook-lm/exports/놀이_목회_정서돌봄_교육매뉴얼_완성원고초안.md` |
+| **B. 집단 놀이 치료 가이드 (기획+시스템)** | Gems 시스템 지시 + **5~10회기** 학교·시설용 기획안 (Yalom·LEAP·Kottman 등) | `manuscript/research/prompts/Gems-집단놀이치료-가이드-시스템지시및기획.md` |
+
+- **A**는 이미 본문 규모가 크므로 → **퇴고·삽화 위치·출판사 제출 형식**이 우선.
+- **B**는 기획·톤이 잡혀 있으므로 → **부별 장문 확장** 또는 A와 **통합 출판 여부**를 먼저 결정하는 것이 좋다.
+
+집필 개요(가이드 전용): `manuscript/outline-집단놀이치료-가이드.md`  
+공통 개요: `manuscript/outline.md`
+
+---
+
+## ③ 완성본을 향해 (우선 순서 제안)
+
+1. **독자 한 축 정하기:** 교사·목회 중심(A) vs 치료사·시설 실무(B) vs **합본** 한 권.
+2. **A 원고:** 목차 대비 빠진 조각·중복 제거 한 바퀴 (에이전트에게 “exports 파일 기준 퇴고 목록” 요청 가능).
+3. **B 기획:** 제4부 10회기를 회기별로 쪼개 **원고 단위**로 옮기기 (Gems에 위 프롬프트 파일을 커스텀 지시로 넣고 생성).
+4. **그림:** 장·회기별 `../assets/ai-generated/chXX-…` 슬롯 + 매니페스트 행 추가.
+
+인덱스 갱신: `manuscript/research/notebook-lm/00-index.md`
