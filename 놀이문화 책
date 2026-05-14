@@ -36,6 +36,8 @@
 1. **독자 한 축 정하기:** 교사·목회 중심(A) vs 치료사·시설 실무(B) vs **합본** 한 권.
 2. **A 원고:** 목차 대비 빠진 조각·중복 제거 한 바퀴 (에이전트에게 “exports 파일 기준 퇴고 목록” 요청 가능).
 3. **B 기획:** 제4부 10회기를 회기별로 쪼개 **원고 단위**로 옮기기 (Gems에 위 프롬프트 파일을 커스텀 지시로 넣고 생성).
-4. **그림:** 장·회기별 `../assets/ai-generated/chXX-…` 슬롯 + 매니페스트 행 추가.
+4. **그림:** 장·회기별 `../assets/ai-generated/chXX-…` 슬롯 + 매니페스트 행 추가. → **시작됨:** `manuscript/assets/IMAGE-MANIFEST.active.csv`, `chapters/00`, `01` 주석 슬롯.
+
+**집필 작업본:** `manuscript/chapters/` (`README.md` 참고)
 
 인덱스 갱신: `manuscript/research/notebook-lm/00-index.md`
