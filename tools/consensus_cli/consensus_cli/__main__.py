@@ -19,9 +19,9 @@ console = Console()
 
 
 def _load_dotenv() -> None:
+    # 항상 이 패키지 옆의 .env 만 사용 (저장소 루트 등 다른 cwd 의 .env 와 섞이지 않게)
     here = Path(__file__).resolve().parent.parent
-    load_dotenv(here / ".env")
-    load_dotenv(Path.cwd() / ".env")
+    load_dotenv(here / ".env", override=True)
     # 줄 끝 공백·따옴표 때문에 401 나는 경우 방지
     for k in ("OPENAI_API_KEY", "ANTHROPIC_API_KEY", "GEMINI_API_KEY"):
         v = os.environ.get(k)
