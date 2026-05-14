@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -21,6 +22,11 @@ def _load_dotenv() -> None:
     here = Path(__file__).resolve().parent.parent
     load_dotenv(here / ".env")
     load_dotenv(Path.cwd() / ".env")
+    # 줄 끝 공백·따옴표 때문에 401 나는 경우 방지
+    for k in ("OPENAI_API_KEY", "ANTHROPIC_API_KEY", "GEMINI_API_KEY"):
+        v = os.environ.get(k)
+        if v and isinstance(v, str):
+            os.environ[k] = v.strip().strip('"').strip("'").strip()
 
 
 def _parse_providers(s: str | None) -> set[str] | None:

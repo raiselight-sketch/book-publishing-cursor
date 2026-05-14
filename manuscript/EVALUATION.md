@@ -85,3 +85,17 @@ JSON까지 남기려면:
 - `--json-out`으로 저장한 파일에는 라운드별 요약이 있어, 어떤 모델이 무엇을 말했는지 추적할 수 있다.
 
 자세한 옵션: [tools/consensus_cli/README.md](../tools/consensus_cli/README.md)
+
+## 401 `Incorrect API key` (OpenAI)일 때
+
+- 터미널 메시지의 `sk-....` 는 **OpenAI가 키를 가릴 때 쓰는 표시**일 수 있어, 반드시 `...` 세 글자를 넣었다는 뜻은 아닙니다.
+- **플랫폼에서 새 시크릿 키**를 만들고 `.env`의 `OPENAI_API_KEY=` 뒤에 **한 줄로** 다시 붙여 넣습니다.
+- 줄 끝·따옴표 문제를 줄이려면 CLI가 `.env`를 읽을 때 **앞뒤 공백·따옴표를 제거**하도록 이미 반영해 두었습니다. `pip install -e .` 경로에서 다시 실행해 보세요.
+- 키 **길이·앞 7글자만** 보려면 (값 전체는 안 나옴):
+
+```bash
+cd "/Users/raiselight/ai 자동화/책출판/tools/consensus_cli"
+./scripts/check-api-env.sh
+```
+
+- 터미널에 **`export OPENAI_API_KEY=`** 를 예전에 해 두었다면 빈 값이 우선될 수 있습니다. `unset OPENAI_API_KEY` 후 다시 시도해 보세요.
