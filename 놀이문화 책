@@ -40,4 +40,6 @@
 
 **집필 작업본:** `manuscript/chapters/` (`README.md` 참고)
 
+**다중 AI 평가(터미널):** `manuscript/EVALUATION.md` — `tools/consensus_cli/.env` + `scripts/evaluate-passage.sh`
+
 인덱스 갱신: `manuscript/research/notebook-lm/00-index.md`

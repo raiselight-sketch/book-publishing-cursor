@@ -46,6 +46,17 @@ book-consensus "..." --skip-vote   # 3차 투표 없이 중재자만
 cat prompt.txt | book-consensus
 ```
 
+## 책 원고 평가 (저장소 루트에서)
+
+`manuscript/EVALUATION.md` 참고. 요약:
+
+```bash
+chmod +x scripts/evaluate-passage.sh   # 최초 1회
+./scripts/evaluate-passage.sh ../../manuscript/snippets/eval-001.md
+```
+
+저장소 루트(`책출판/`)에서 상대 경로로 넘겨도 된다.
+
 ## 주의
 
 - API 비용이 **모델 수 × 라운드**만큼 듭니다. 테스트는 `-p openai,ollama` 처럼 줄이세요.  

@@ -24,6 +24,7 @@
 | `manuscript/research/notebook-lm/` | [NotebookLM](manuscript/research/notebook-lm/README.md)에서 보낸 자료·요약·인용 스니펫 (미러링) |
 | `manuscript/research/prompts/` | Gems·커스텀 시스템 지시 등 (예: 집단 놀이 치료 가이드 프롬프트) |
 | `manuscript/assets/` | [사진·AI 삽화·도판](manuscript/assets/README.md) (`photos/`, `ai-generated/`, `figures/`) |
+| `manuscript/EVALUATION.md` | [터미널 API·다중 AI 평가](manuscript/EVALUATION.md) (`snippets/`, `book-consensus`) |
 
 한글(HWP)·워드(DOCX)로 제출할 때는 여기서 다듬은 뒤 옮겨 적거나내면 된다.
 
@@ -32,6 +33,8 @@
 Gemini·ChatGPT·Claude·Ollama(Gemma 등)가 초안 → 상호 통합 → 투표로 최종안을 고른다.
 
 설치·사용: [tools/consensus_cli/README.md](tools/consensus_cli/README.md)
+
+원고 조각 평가 절차: [manuscript/EVALUATION.md](manuscript/EVALUATION.md) — `tools/consensus_cli/.env`에 API 키 후 `scripts/evaluate-passage.sh` 실행.
 
 ## GitHub
 
