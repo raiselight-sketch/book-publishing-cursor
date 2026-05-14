@@ -1,0 +1,13 @@
+---
+description: NotebookLM에서 모은 연구 자료는 manuscript/research/notebook-lm에 미러링한다.
+globs:
+  - manuscript/research/**/*
+  - manuscript/outline.md
+alwaysApply: false
+---
+
+# NotebookLM 연구 자료
+
+- 사용자가 **NotebookLM**, **노트북 LM**, **NLM** 자료를 언급하면 `manuscript/research/notebook-lm/README.md`의 연결 방식을 따른다.
+- 집필·목차·근거 보강 시 **`manuscript/research/notebook-lm/`** 안의 마크다운·보내기를 우선 근거로 삼는다. 비어 있으면 미러링 절차를 한 번 안내한다.
+- `00-index.md`에 노트북과 로컬 파일 매핑이 있으면 그걸 기준으로 어떤 파일을 읽을지 정한다.

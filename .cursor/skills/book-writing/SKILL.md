@@ -320,7 +320,8 @@ disable-model-invocation: false
 → 신학서 / 설교집 집필: `references/theological-book.md` 참조  
 → 간증·자서전 집필: `references/memoir-guide.md` 참조  
 → 출판사 기획안 작성: `references/proposal-template.md` 참조  
-→ 자비출판 체크리스트: `references/self-publishing.md` 참조
+→ 자비출판 체크리스트: `references/self-publishing.md` 참조  
+→ **NotebookLM**에서 모은 자료: `manuscript/research/notebook-lm/README.md` — 이 폴더로 보내기·보낸 파일을 두면 Cursor에서 집필에 연결된다 (실시간 공식 동기화는 없음).
 
 ---
 

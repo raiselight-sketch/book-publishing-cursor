@@ -21,7 +21,7 @@
 | `manuscript/outline.md` | 한 줄 코어 문장, 목차, 챕터 메모 |
 | `manuscript/chapters/` | 챕터별 마크다운 (`01-제목.md` 형식 권장) |
 | `manuscript/front-matter.md` | 프롤로그, 추천의 글 초안 |
-| `manuscript/back-matter.md` | 에필로그, 부록, 참고문헌 메모 |
+| `manuscript/research/notebook-lm/` | [NotebookLM](manuscript/research/notebook-lm/README.md)에서 보낸 자료·요약·인용 스니펫 (미러링) |
 
 한글(HWP)·워드(DOCX)로 제출할 때는 여기서 다듬은 뒤 옮겨 적거나내면 된다.
 
