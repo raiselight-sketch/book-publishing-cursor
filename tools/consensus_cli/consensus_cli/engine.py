@@ -257,6 +257,46 @@ def arbiter_pick(
     )
 
 
+def _run_single_provider(
+    user_prompt: str,
+    spec: ProviderSpec,
+    *,
+    verbose: bool,
+) -> dict:
+    """제공자가 1개일 때: 합의 없이 1회 완성 응답."""
+    system = (
+        "당신은 전문 작가·편집자입니다. 사용자 요청에 대해 "
+        "완결된 답변을 한국어로 작성하세요. 불필요한 메타 설명은 줄이세요."
+    )
+    if verbose:
+        console.print(
+            Panel.fit(
+                f"• 단일 모델: {spec.label} — `{spec.model}`\n"
+                "(다중 합의·투표는 생략됩니다. `-p`로 모델을 2개 이상 주면 전체 합의가 돌아갑니다.)",
+                title="Consensus (단일)",
+            )
+        )
+    text = complete_chat(
+        spec.model,
+        [
+            {"role": "system", "content": system},
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=0.35,
+    )
+    text = text.strip()
+    return {
+        "providers": [spec.__dict__],
+        "round1": {spec.key: text},
+        "round2": {},
+        "round3_votes": {},
+        "vote_tally": {},
+        "winner_label": None,
+        "final_text": text,
+        "final_source": f"단일 제공자 `{spec.label}`",
+    }
+
+
 def run_consensus(
     user_prompt: str,
     provider_filter: set[str] | None = None,
@@ -267,11 +307,13 @@ def run_consensus(
     cfg = load_model_config()
     use = provider_filter or {"gemini", "openai", "anthropic", "ollama"}
     providers = build_providers(cfg, use)
-    if len(providers) < 2:
+    if len(providers) == 0:
         raise SystemExit(
-            "활성화된 제공자가 2개 미만입니다. API 키(또는 Ollama)를 확인하고 "
-            "`--providers` 로 최소 2개 이상 켜세요."
+            "활성화된 제공자가 없습니다. `.env`의 API 키와 `--providers` 옵션을 확인하세요."
         )
+
+    if len(providers) == 1:
+        return _run_single_provider(user_prompt, providers[0], verbose=verbose)
 
     if verbose:
         console.print(

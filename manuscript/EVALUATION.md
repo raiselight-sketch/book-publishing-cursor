@@ -66,6 +66,8 @@ JSON까지 남기려면:
 "…/evaluate-passage.sh" "manuscript/snippets/eval-001.md" -p openai,anthropic
 ```
 
+**한 개만** 쓰면 (`-p openai` 등) “다중 합의”가 아니라 **그 모델로 1회 응답**만 나옵니다. 연결 테스트·저비용 퇴고에 쓰면 됩니다. **진짜 합의(초안→통합→투표)** 는 `-p`에 **서로 다른 제공자를 2개 이상** 넣으세요.
+
 ## 4) 결과 반영
 
 - 터미널에 나온 **최종 합의** 문단을 `manuscript/chapters/` 또는 `exports` 퇴고본에 반영한다.
