@@ -51,9 +51,11 @@ cat prompt.txt | book-consensus
 `manuscript/EVALUATION.md` 참고. 요약:
 
 ```bash
-chmod +x scripts/evaluate-passage.sh   # 최초 1회
+chmod +x scripts/evaluate-passage.sh scripts/reset-api-env.sh   # 최초 1회
 ./scripts/evaluate-passage.sh ../../manuscript/snippets/eval-001.md
 ```
+
+API를 **다시** 넣을 때: `./scripts/reset-api-env.sh` 후 `.env` 편집.
 
 저장소 루트(`책출판/`)에서 상대 경로로 넘겨도 된다.
 

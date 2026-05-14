@@ -12,6 +12,17 @@ cp .env.example .env
 open -e .env
 ```
 
+### 다시 처음부터 설정할 때
+
+기존 `.env`는 **날짜 붙은 백업**으로 남기고 예시로 덮어씁니다.
+
+```bash
+cd "/Users/raiselight/ai 자동화/책출판/tools/consensus_cli"
+chmod +x scripts/reset-api-env.sh   # 최초 1회
+./scripts/reset-api-env.sh
+open -e .env
+```
+
 `.env` 안에 **본인 키만** 채운다 (절대 Git에 커밋하지 말 것 — 이미 `.gitignore` 처리됨).
 
 | 변수 | 용도 |
