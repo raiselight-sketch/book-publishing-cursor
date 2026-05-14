@@ -25,6 +25,12 @@
 
 한글(HWP)·워드(DOCX)로 제출할 때는 여기서 다듬은 뒤 옮겨 적거나내면 된다.
 
+## 다중 LLM 합의 CLI
+
+Gemini·ChatGPT·Claude·Ollama(Gemma 등)가 초안 → 상호 통합 → 투표로 최종안을 고른다.
+
+설치·사용: [tools/consensus_cli/README.md](tools/consensus_cli/README.md)
+
 ## GitHub
 
 원격 저장소: [https://github.com/raiselight-sketch/book-publishing-cursor](https://github.com/raiselight-sketch/book-publishing-cursor)
