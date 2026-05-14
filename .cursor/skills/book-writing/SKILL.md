@@ -5,7 +5,8 @@ description: >-
   positioning, outline, chapter architecture, drafting and revision rhythms,
   proposal packages, submission strategy, and post-launch marketing. Use when
   the user mentions 책, 원고, 출판, 목차, 챕터, 기획안, 투고, 자비출판, 설교집,
-  신학서, 간증, 에세이, 큐티집, 프롤로그, 에필로그, or wants a complete book
+  신학서, 간증, 에세이, 큐티집, 프롤로그, 에필로그, 삽화, 사진, 도판, AI 그림,
+  AI 이미지, 일러스트, or wants a complete book
   workflow in this repository.
 disable-model-invocation: false
 ---
@@ -27,6 +28,7 @@ disable-model-invocation: false
 3. **독자 대상**: 교인 / 청년 / 목회자 / 일반 대중 / 특정 커뮤니티
 4. **분량 목표**: 단행본(200~350p) / 소책자(100p 이하) / 시리즈
 5. **출판 방식**: 전통 출판사 / 자비 출판 / POD / 전자책
+6. **삽화·이미지**: 이 책에 **사진·도판·AI 생성 그림**이 들어가는지, 인쇄(컬러 면수) vs 전자책 위주인지, 실사와 AI의 **비율·톤**(밝음/차분 등)을 확인하라.
 
 ---
 
@@ -108,6 +110,15 @@ disable-model-invocation: false
 | 실용서/자기계발 | 10~15개 | 4,000~6,000자 | 8~10만 자 |
 | 신학 전문서 | 8~12개 | 6,000~10,000자 | 10~15만 자 |
 | 간증/자서전 | 10~18개 | 3,000~5,000자 | 6~9만 자 |
+
+### 2-3. 삽화·사진·AI 이미지 (도판 포함)
+
+이 저장소에서 **집필 중인 책에 시각 자료(사진·도판·AI 이미지)가 포함된다**고 가정하고 다음을 지킨다.
+
+- **원본 위치**: `manuscript/assets/` — 세부 규칙·해상도·저작권 체크리스트는 `manuscript/assets/README.md`를 따른다.
+- **집필 시**: 마크다운에서는 `![캡션](assets/photos/ch01-photo-01.jpg)`처럼 **상대 경로**로 삽입 위치를 표시한다.
+- **AI 이미지**: 생성 툴의 **상업 이용 허용**, 책 속 **표기 문구**를 출판 전에 확정하도록 안내한다. 파일마다 `IMAGE-MANIFEST`에 도구명·프롬프트 요약·날짜를 남기도록 권한다.
+- **캡션·그림 목록**: 챕터별로 “그림 3-1 …” 형태를 통일하고, 퇴고 단계에서 번호·캡션 오류를 점검한다.
 
 ---
 
@@ -321,7 +332,8 @@ disable-model-invocation: false
 → 간증·자서전 집필: `references/memoir-guide.md` 참조  
 → 출판사 기획안 작성: `references/proposal-template.md` 참조  
 → 자비출판 체크리스트: `references/self-publishing.md` 참조  
-→ **NotebookLM**에서 모은 자료: `manuscript/research/notebook-lm/README.md` — 이 폴더로 보내기·보낸 파일을 두면 Cursor에서 집필에 연결된다 (실시간 공식 동기화는 없음).
+→ **NotebookLM**에서 모은 자료: `manuscript/research/notebook-lm/README.md` — 이 폴더로 보내기·보낸 파일을 두면 Cursor에서 집필에 연결된다 (실시간 공식 동기화는 없음).  
+→ **사진·AI 삽화·도판**: `manuscript/assets/README.md` — `photos/`, `ai-generated/`, `figures/` 및 매니페스트.
 
 ---
 
@@ -336,3 +348,4 @@ disable-model-invocation: false
 5. **제목 브레인스토밍**: 20~30개 후보 제목 생성
 6. **마케팅 문구**: 책 소개문, SNS 카드뉴스 문구, 보도자료
 7. **챕터별 성경 연구**: 본문 분석, 관련 구절 제안
+8. **삽화 기획**: 챕터별 이미지 슬롯(훅용 일러·사진 설명), 캡션 초안, AI 프롬프트 초안(저자가 외부 툴에 넣기 전 단계)

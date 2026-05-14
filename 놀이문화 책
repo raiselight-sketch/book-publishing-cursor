@@ -1,0 +1,7 @@
+# 놀이문화 (집필 노트)
+
+현재 집필 중인 책으로, **사진·도판·AI 이미지**가 들어간다.
+
+- 목차·코어 문장: `manuscript/outline.md`
+- 연구·NotebookLM: `manuscript/research/notebook-lm/`
+- 이미지 원본·매니페스트: `manuscript/assets/` (`README.md` 참고)

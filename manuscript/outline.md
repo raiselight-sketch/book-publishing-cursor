@@ -1,6 +1,7 @@
 # 책 개요 (작성 중)
 
 > **NotebookLM 미러**: 자료는 `manuscript/research/notebook-lm/`에 두고, 인덱스는 `notebook-lm/00-index.md`를 갱신한다. 상세는 해당 폴더의 `README.md`.
+> **삽화·사진·AI 그림**: `manuscript/assets/README.md` — 파일은 `photos/`, `ai-generated/`, `figures/`에 두고 `IMAGE-MANIFEST`로 출처를 남긴다.
 
 ## Core sentence (한 문장)
 
