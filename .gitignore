@@ -2,6 +2,7 @@
 ~$*
 tools/consensus_cli/.env
 tools/consensus_cli/.env.backup.*
+tools/consensus_cli/.env.deleted.*
 tools/consensus_cli/.venv/
 tools/consensus_cli/**/*.egg-info/
 tools/consensus_cli/**/__pycache__/
